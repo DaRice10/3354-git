@@ -3,6 +3,8 @@ package adder;
 public class Main {
 
     public static void main(String[] args) {
+		if (args.length <= 1) 
+				throw new IllegalArgumentException("Please Enter more than 1 argument.");
         try {
             int result = addArguments(args);
             System.out.println(result);
@@ -19,4 +21,7 @@ public class Main {
 		}			
         return total;
     }
+}
+
+
 }
