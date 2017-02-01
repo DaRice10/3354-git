@@ -1,5 +1,6 @@
 package adder;
 
+
 public class Main {
 
     public static void main(String[] args) {
@@ -15,10 +16,18 @@ public class Main {
 
     private static int addArguments(String[] args) {
 		int total = 0;
+			if (args[0].equals("-")){
+			
+				for (int i = 1;i < args.length; i++)	
+			total-=  Integer.valueOf(args[i]);
+		}
+					else{
 		for (int i = 0;i < args.length; i++)
 			{
+			
 				total+=  Integer.valueOf(args[i]);
 		}			
+					}			
         return total;
     }
 }
